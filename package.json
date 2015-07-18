@@ -1,0 +1,21 @@
+{
+  "name": "baloum",
+  "version": "1.0.0",
+  "description": "Digital Library",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Djoufo Taka",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.13.2",
+    "express": "^4.13.1",
+    "lodash": "^3.10.0",
+    "method-override": "^2.3.4",
+    "mongoose": "^4.0.7",
+    "morgan": "^1.6.1",
+    "node-restful": "^0.2.1"
+  }
+}
