@@ -1,0 +1,57 @@
+`<!doctype html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+
+    <title>Starter Node and Angular</title>
+
+    <!-- CSS -->
+   <link rel="stylesheet" href="../css/bootstrap.min.css">
+   <!--  <link rel="stylesheet" href="css/style.css"> --><!-- custom styles -->
+
+    <!-- JS -->
+    <script src="../js/libs/angular-min.js"></script>
+     <!-- <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>  --> 
+
+    <script src="../js/libs/angular-route-min.js"></script>
+
+    <!-- ANGULAR CUSTOM -->
+    <script src="../js/controllers/MainCtrl.js"></script>
+    <script src="../js/controllers/StudentCtrl.js"></script>
+    <script src="../js/services/StudentServ.js"></script>
+    <script src="../js/routes/AppRt.js"></script>
+    <script src="../js/app.js"></script>
+   
+    
+</head>
+<!-- <body ng-controller="StudentCtrl"> -->
+
+<body ng-app="sampleApp" ng-controller="StudentController" >
+ <div class="container">
+
+    <!-- HEADER -->
+    <nav class="navbar navbar-inverse">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#/">root</a>
+        </div>
+
+      <!--   LINK TO OUR PAGES. ANGULAR HANDLES THE ROUTING HERE -->
+        <div>
+        <ul class="nav navbar-nav">
+            <li><a href="#/students">students</a></li>
+        </ul>
+        </div>
+    </nav>
+    index
+     <!-- ANGULAR DYNAMIC CONTENT -->
+   
+
+ <!-- <div ng-view></div> -->
+
+<!-- <ng-view></ng-view> -->
+ 
+</div>
+
+</body>
+</html>

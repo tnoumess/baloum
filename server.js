@@ -1,7 +1,7 @@
 /*  Application bootstrap*/
 
 // set up ======================================================================
-   
+   console.log(__dirname);
 var express = require('./node_modules/express');
 var app = express();  // create our app w/ express
 var mongoose = require('./node_modules/mongoose');  // mongoose for mongodb
@@ -11,15 +11,18 @@ var _ = require('./node_modules/lodash');
 var morgan = require('./node_modules/morgan');  // log requests to the console (express4)
 var database = require('./config/database');
 var http=require('http');
+var port = process.env.PORT || 8080;
 
 // Configuration =======================================================
-    app.use(express.static(__dirname + '/public'));                 // set the static files location /public/img will be /img for users
+    app.use(express.static(__dirname + '/client'));                 // set the static files location /public/img will be /img for users
     app.use(morgan('dev'));                                         // log every request to the console
     app.use(bodyParser.urlencoded({'extended':'true'}));            // parse application/x-www-form-urlencoded
     app.use(bodyParser.json());                                     // parse application/json
     app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse application/vnd.api+json as json
     app.use(methodOverride());
-
+    app.engine('html', require('ejs').renderFile);
+    app.set('views', __dirname + '/server/views');
+    app.set('view engine', 'ejs');
 // Process request
 app.use('/hello', function(req,res,next){
 	res.send('hello there!');
@@ -63,10 +66,10 @@ mongoose.connect(database.url);
 
 //Starting the node server and listening ==================================================
 mongoose.connection.once('open', function(){
-	console.log('Listening on port 3000...');
+	console.log('Listening on port 8080...');
 	// setInterval(function(){
 	// 	console.log('world');
 	// },2000)
 	// console.log('hello');
-	app.listen(3000);
+	app.listen(port);
 });
