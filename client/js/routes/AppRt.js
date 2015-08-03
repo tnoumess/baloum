@@ -1,3 +1,4 @@
+ 
  var rt=angular.module('AppRt', ['ngRoute']);
 rt.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 
@@ -16,7 +17,7 @@ rt.config(['$routeProvider', '$locationProvider', function($routeProvider, $loca
 
        
         .when('/students', { 
-            templateUrl: 'views/student.html',
+            templateUrl: '/views/student.html',
             controller: 'StudentController'
         })
         .otherwise({

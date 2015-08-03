@@ -39,17 +39,22 @@
       <!--   LINK TO OUR PAGES. ANGULAR HANDLES THE ROUTING HERE -->
         <div>
         <ul class="nav navbar-nav">
-            <li><a href="#/students">students</a></li>
+            <li><a href="/home#/home">home</a></li>
+        </ul>
+         <ul class="nav navbar-nav">
+            <li><a href="/students#/students">students</a></li>
         </ul>
         </div>
     </nav>
-    index
+    
      <!-- ANGULAR DYNAMIC CONTENT -->
-   
+     <div ng-include src="'./views/proxy.html'"></div>
+     <div ui-view></div>
 
  <!-- <div ng-view></div> -->
 
 <!-- <ng-view></ng-view> -->
+<!-- localhost:8080/#%2Fstudents -->
  
 </div>
 

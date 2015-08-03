@@ -61,8 +61,8 @@ app.get('/render', function(req, res) {
 
     // application -------------------------------------------------------------
     app.get('/', function(req, res) {console.log('in server router'); 
-        //res.sendFile('/home/edson/Desktop/baloum/client/views/index.html'); // load the single view file (angular will handle the page changes on the front-end)
-        res.render('index.ejs',{title: 'welcome'});
+        res.sendFile('/home/edson/Desktop/baloum/client/views/index.html'); // load the single view file (angular will handle the page changes on the front-end)
+        //res.render('index.ejs',{title: 'welcome'});
     });
 // application -------------------------------------------------------------
     app.get('/home', function(req, res) {console.log('in server router'); 
@@ -77,5 +77,16 @@ app.get('/render', function(req, res) {
     app.get('/*', function(req, res) {
     res.render('404.server.view.ejs',{title: '404'});
    });
+
+    app.get('/^students#%2Fstudents', function(req, res) {console.log('in server router'); 
+        res.sendFile('/home/edson/Desktop/baloum/client/views/index.html'); // load the single view file (angular will handle the page changes on the front-end)
+        //res.render('index.ejs',{title: 'welcome'});
+    });
+
+    app.get('/^home#%2Fhome', function(req, res) {console.log('in server router'); 
+        res.sendFile('/home/edson/Desktop/baloum/client/views/index.html'); // load the single view file (angular will handle the page changes on the front-end)
+        //res.render('index.ejs',{title: 'welcome'});
+    });
+    
 
 };
