@@ -61,7 +61,9 @@ app.get('/render', function(req, res) {
 
     // application -------------------------------------------------------------
     app.get('/', function(req, res) {console.log('in server router'); 
-        res.sendFile('/home/edson/Desktop/baloum/client/views/index.html'); // load the single view file (angular will handle the page changes on the front-end)
+         res.sendFile('/home/edson/Desktop/baloum/client1.0/index.html'); // load the single view file (angular will handle the page changes on the front-end)
+        
+        //res.sendFile('/home/edson/Desktop/baloum/client/views/index.html'); // load the single view file (angular will handle the page changes on the front-end)
         //res.render('index.ejs',{title: 'welcome'});
     });
 // application -------------------------------------------------------------
